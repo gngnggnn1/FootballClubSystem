@@ -137,8 +137,8 @@ CREATE TABLE `jointeamapplication`  (
 -- ----------------------------
 -- Records of jointeamapplication
 -- ----------------------------
-INSERT INTO `jointeamapplication` VALUES (2, 'lgn', 24, 1, '李广宁');
-INSERT INTO `jointeamapplication` VALUES (4, 'lgn', 24, 1, '李广宁');
+INSERT INTO `jointeamapplication` VALUES (2, 'lgn', 24, 1, '但是');
+INSERT INTO `jointeamapplication` VALUES (4, 'lgn', 24, 1, '大苏打的');
 INSERT INTO `jointeamapplication` VALUES (5, 'gngnggnn1', 24, 1, '帅哥');
 
 -- ----------------------------
