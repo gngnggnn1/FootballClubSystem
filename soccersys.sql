@@ -208,7 +208,7 @@ INSERT INTO `thread` VALUES (5, '坛友须知', 'admin', '2021-04-28 15:19:10', 
 INSERT INTO `thread` VALUES (6, '明天场地关闭', 'admin', '2021-04-30 17:10:37', '因为灯光升级，场地关闭', 0);
 INSERT INTO `thread` VALUES (7, '明天踢球吗？', 'admin', '2021-04-30 17:10:59', '不见不散', 1);
 INSERT INTO `thread` VALUES (8, '今天舒服啊', 'admin', '2021-04-30 17:12:57', '大胜!', 1);
-INSERT INTO `thread` VALUES (9, '最近两会，请大家谨言慎行', 'admin', '2021-04-30 23:51:12', '好好说话', 0);
+INSERT INTO `thread` VALUES (9, '564564', 'admin', '2021-04-30 23:51:12', '好好说话', 0);
 INSERT INTO `thread` VALUES (10, '明天来一场五人制？', 'lgn', '2021-05-03 14:17:21', '加我好友', 1);
 INSERT INTO `thread` VALUES (11, '内部课程限量发布，快来抢', 'ance111', '2021-05-03 20:30:35', '认准我安切洛蒂', 1);
 INSERT INTO `thread` VALUES (12, '多特蒙德招人了，明天来试训', 'bvb1909', '2021-05-03 20:44:40', '千载难逢，不要错过', 1);
@@ -238,10 +238,10 @@ INSERT INTO `user` VALUES ('bvb1909', 'bvb1909', 3, 23, NULL, NULL, NULL, NULL);
 INSERT INTO `user` VALUES ('favre', 'favre', 4, NULL, '法弗尔', NULL, NULL, NULL);
 INSERT INTO `user` VALUES ('gngnggnn1', 'gngnggnn1', 2, 24, '帅哥', NULL, 26, '123456');
 INSERT INTO `user` VALUES ('klopp', 'klopp', 4, NULL, '克洛普', NULL, NULL, NULL);
-INSERT INTO `user` VALUES ('lgn', 'lgn', 2, 24, '李广宁', '男', 23, '123123');
+INSERT INTO `user` VALUES ('lgn', 'lgn', 2, 24, '5656', '男', 23, '123123');
 INSERT INTO `user` VALUES ('liaoning', 'liaoning', 3, 22, NULL, NULL, NULL, NULL);
 INSERT INTO `user` VALUES ('mufc', 'mufc123', 3, 24, NULL, NULL, NULL, NULL);
 INSERT INTO `user` VALUES ('pep2012', 'pep2012', 4, NULL, '瓜迪奥拉', NULL, NULL, NULL);
-INSERT INTO `user` VALUES ('swf', 'swf', 2, NULL, '苏威峰', NULL, 31, '1515151515151');
+INSERT INTO `user` VALUES ('swf', 'swf', 2, NULL, '455', NULL, 31, '1515151515151');
 
 SET FOREIGN_KEY_CHECKS = 1;
