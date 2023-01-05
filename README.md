@@ -1,3 +1,3 @@
-## 五人制足球管理系统
+## Five-a-side Football Club Management System
 
-基于JDK11 JSP开发
+Based on JDK11, designed for Hohhot Qiangcheng FC.
