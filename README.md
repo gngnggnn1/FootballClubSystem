@@ -3,8 +3,6 @@
 A web-based system to manage a five-a-side football club’s operations — players, teams, matches, registrations, and basic club admin.  
 Designed for **Hohhot Qiangcheng FC** and built with **JDK 11**.
 
----
-
 ## Features
 
 - **Player & Team Management** – Create/update players, assign to teams, manage positions and statuses.
@@ -15,8 +13,6 @@ Designed for **Hohhot Qiangcheng FC** and built with **JDK 11**.
 
 > *Note:* Exact modules/screens depend on your implementation in `src/` and `WebContent/`.
 
----
-
 ## Tech Stack
 
 - **Java (JDK 11)** — Core backend logic.
@@ -25,21 +21,18 @@ Designed for **Hohhot Qiangcheng FC** and built with **JDK 11**.
 - **HTML / CSS / JavaScript** — Frontend.
 - **Apache Tomcat 9+** — Recommended application server.
 
----
-
 ## Project Structure
 
+```
 FootballClubSystem/
-├─ src/ # Java source (servlets, DAO, models)
-├─ WebContent/ # JSPs, static assets, WEB-INF
-├─ build/ # Compiled classes (if checked in)
-├─ backup/ # Project backups / exports
-├─ .settings/ .project .classpath # Eclipse project files
-├─ soccersys.sql # DB schema & sample data
+├─ src/                   # Java source (servlets, DAO, models)
+├─ WebContent/            # JSPs, static assets, WEB-INF
+├─ build/                 # Compiled classes (if checked in)
+├─ backup/                # Project backups / exports
+├─ .settings/ .project .classpath  # Eclipse project files
+├─ soccersys.sql          # DB schema & sample data
 └─ README.md
-
-
----
+```
 
 ## Getting Started
 
@@ -49,53 +42,70 @@ FootballClubSystem/
 - **MySQL 8.x**
 - **Maven** *(optional)*
 
----
-
 ### 1) Database Setup
 1. Create a database:
    ```sql
    CREATE DATABASE soccersys CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+   ```
+2. Import schema & seed data:
+   ```bash
+   mysql -u <user> -p soccersys < soccersys.sql
+   ```
+3. Note DB connection details (host, port, username, password).
 
-    Import schema & seed data:
+### 2) Configure Database Credentials
+Update credentials in your DB config file (e.g., `WEB-INF/web.xml`, `db.properties`, or DAO constants):
+```
+db.url=jdbc:mysql://localhost:3306/soccersys?useSSL=false&serverTimezone=UTC
+db.user=your_user
+db.password=your_password
+```
 
-    mysql -u <user> -p soccersys < soccersys.sql
+### 3) Build & Run
 
-    Note DB connection details (host, port, username, password).
+#### Option A — Eclipse
+1. Import into Eclipse: `File > Import > Existing Projects into Workspace`.
+2. Add Tomcat 9 in Servers view.
+3. Right-click project → `Run on Server`.
 
-2) Configure Database Credentials
+#### Option B — Manual Tomcat Deploy
+1. Compile and ensure classes are in `WEB-INF/classes` and libs in `WEB-INF/lib`.
+2. Deploy WAR file to `tomcat/webapps/`.
+3. Start Tomcat and open:
+   ```
+   http://localhost:8080/FootballClubSystem/
+   ```
 
-    Update credentials in your DB config file (e.g., WEB-INF/web.xml, db.properties, or DAO constants):
+### Configuration
+- **JDBC Driver**: Ensure `mysql-connector-j` is in `WEB-INF/lib`.
+- **Encoding**: Set UTF-8 for JSPs and database.
+- **Optional Env Vars**:
+  ```
+  DB_URL, DB_USER, DB_PASSWORD
+  ```
 
-    db.url=jdbc:mysql://localhost:3306/soccersys?useSSL=false&serverTimezone=UTC
-    db.user=your_user
-    db.password=your_password
+## Screenshots (Optional)
+Add screenshots in `/docs/img/` showing:
+- Player management
+- Team list
+- Match scheduling
 
-3) Build & Run
+## Roadmap
+- Role-based authentication
+- REST API endpoints
+- CSV/Excel import & export
+- Unit tests with JUnit + Mockito
+- GitHub Actions CI/CD
+- Dockerfile & Compose setup
 
-Option A — Eclipse
+## Contributing
+1. Fork the repo & create a feature branch.
+2. Follow conventional commit messages (`feat: ...`, `fix: ...`).
+3. Open a Pull Request describing your changes.
 
-    Import into Eclipse: File > Import > Existing Projects into Workspace.
+## License
+Add a `LICENSE` file to specify usage rights (e.g., MIT).
 
-    Add Tomcat 9 in Servers view.
-
-    Right-click project → Run on Server.
-
-Option B — Manual Tomcat Deploy
-
-    Compile and ensure classes are in WEB-INF/classes and libs in WEB-INF/lib.
-
-    Deploy WAR file to tomcat/webapps/.
-
-    Start Tomcat and open:
-
-    http://localhost:8080/FootballClubSystem/
-
-Configuration
-
-    JDBC Driver: Ensure mysql-connector-j is in WEB-INF/lib.
-
-    Encoding: Set UTF-8 for JSPs and database.
-
-    Optional Env Vars:
-
-        DB_URL, DB_USER, DB_PASSWORD
+## Acknowledgments
+- Built for **Hohhot Qiangcheng FC** (五人制).
+- Thanks to contributors and testers.
